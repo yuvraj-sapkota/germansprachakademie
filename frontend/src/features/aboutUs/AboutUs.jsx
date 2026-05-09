@@ -103,7 +103,7 @@ export default function About() {
                 >
                   Located in the heart of Butwal, we are a government-registered
                   language institute dedicated to providing world-class language
-                  education. Our expert instructors bring real-world experience
+                  education. Our expert instructor bring real-world experience
                   and exam-focused training methodologies.
                 </motion.p>
 
