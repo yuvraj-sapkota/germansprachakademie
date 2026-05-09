@@ -178,7 +178,7 @@ export default function About() {
                 transition={{ duration: 0.4 }}
               >
                 <img
-                  src="https://images.unsplash.com/photo-1580582932707-520aed937b7b?w=800&q=80"
+                  src="https://plus.unsplash.com/premium_photo-1671070687988-b2d6805ea896?q=80&w=736&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                   alt="Students learning German at German Sprach Akademie"
                   className="w-full h-full object-cover object-center"
                 />
@@ -201,10 +201,6 @@ export default function About() {
                 </div>
 
                 <div>
-                  <p className="text-gray-900 font-bold text-lg leading-none">
-                    A1 — C2
-                  </p>
-
                   <p className="text-gray-400 text-xs mt-1">
                     All proficiency levels
                   </p>
@@ -222,7 +218,7 @@ export default function About() {
             transition={{ duration: 0.7 }}
           >
             <img
-              src="https://images.unsplash.com/photo-1580582932707-520aed937b7b?w=800&q=80"
+              src="https://plus.unsplash.com/premium_photo-1671070687988-b2d6805ea896?q=80&w=736&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
               alt="Students learning German at German Sprach Akademie"
               className="w-full h-full object-cover object-center"
             />

@@ -10,7 +10,7 @@ const Hero = () => {
       className="scroll-mt-20 w-full h-[90vh] bg-cover bg-center relative flex mt-20 mb-10 pt-14 md:pt-20"
       style={{
         backgroundImage:
-          "url('https://images.unsplash.com/photo-1653566031392-4f2a9f1aa9b3?q=80&w=871&auto=format&fit=crop')",
+          "url('https://images.unsplash.com/photo-1499750310107-5fef28a66643?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')",
       }}
     >
       {/* Overlay */}
