@@ -22,10 +22,12 @@ const contactInfo = [
   {
     icon: Phone,
     text: "+977 9811526003",
+    href: "tel:+9779811526003",
   },
   {
     icon: Mail,
     text: "germansprachakademie@gmail.com",
+    href: "mailto:germansprachakademie@gmail.com",
   },
   {
     icon: Clock,
@@ -124,13 +126,23 @@ export default function Footer() {
             {contactInfo.map((item, i) => {
               const Icon = item.icon;
 
-              return (
-                <p
+              const content = (
+                <div className="flex gap-2 items-center text-gray-400 font-medium text-sm md:text-base tracking-tight">
+                  <Icon size={18} className="flex-shrink-0" />
+                  {item.text}
+                </div>
+              );
+
+              return item.href ? (
+                <a
                   key={i}
-                  className="text-gray-400 font-medium text-sm md:text-base break-all tracking-tight flex gap-2 items-center"
+                  href={item.href}
+                  className="hover:text-white transition"
                 >
-                  <Icon size={18} /> {item.text}
-                </p>
+                  {content}
+                </a>
+              ) : (
+                <div key={i}>{content}</div>
               );
             })}
           </FooterSection>
