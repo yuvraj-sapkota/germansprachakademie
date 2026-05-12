@@ -12,7 +12,15 @@ const languageCourses = {
       title: "A1 German",
       description:
         "Beginner foundation for daily communication & basic vocabulary.",
-      features: ["Goethe A1 Prep", "Grammar Basics", "Spoken Practice"],
+
+      features: [
+        " Full Grammar: A-Z, der/die/das, Akkusativ, Präsens",
+        "Real Talks: Name, Einkaufen, Uhrzeit, Termine",
+        ,
+        "  Goethe A1 Prep: Hören/Lesen/Schreiben/Sprechen + Mocks",
+      ],
+
+      // features: ["Goethe A1 Prep", "Grammar Basics", "Spoken Practice"],
     },
     {
       id: 2,
@@ -20,7 +28,11 @@ const languageCourses = {
       title: "A2 German",
       description:
         "Elementary level covering past tense, travel & social interactions.",
-      features: ["Goethe A2 Prep", "Extended Grammar", "Reading Skills"],
+      features: [
+        "Key Grammar: Perfekt, Präteritum, Dativ, Modalverben",
+        " Real Talks: Weg fragen, Arzt, Wohnung, Reisen",
+        " Goethe A2 Prep: Brief schreiben + Alle Teile + Mocks",
+      ],
     },
     {
       id: 3,
@@ -28,7 +40,11 @@ const languageCourses = {
       title: "B1 German",
       description:
         "Intermediate fluency for work, study, and integration in Germany.",
-      features: ["Goethe B1 Prep", "ÖSD Option", "Writing Skills"],
+      features: [
+        " Core Grammar: Nebensätze, Adjektive, Konjunktiv II",
+        " Real Talks: Job Interview, Behörden, Meinung sagen",
+        " Goethe/ÖSD B1 Prep: E-Mail, Präsentation, Diskussion + Mocks",
+      ],
     },
     {
       id: 4,
@@ -36,24 +52,32 @@ const languageCourses = {
       title: "B2 German",
       description:
         "Upper-intermediate level required for Ausbildung & universities.",
-      features: ["Goethe B2", "Academic Writing", "Interview Prep"],
+      features: [
+        " Advanced Grammar: Passiv, Konjunktiv I, N-Deklination",
+        " Real Talks: Uni Bewerbung, Argumentieren, Vortrag halten",
+        " Goethe/ÖSD B2 Prep: Diagramm, Textanalyse, Alle Teile + Mocks",
+      ],
     },
     {
       id: 5,
-      level: "All Levels",
-      title: "Goethe Prep",
+      level: " A1-B2",
+      title: "Goethe/ÖSD Exam Prep",
       description:
         "Intensive preparation for official Goethe-Institut examinations.",
-      features: ["Mock Tests", "Past Papers", "Speaking Drills"],
+      features: [
+        "  Alle Module: Hören, Lesen, Schreiben, Sprechen Training",
+        "Mock Tests + Past Papers + Speaking Drills",
+        "Latest Exam Strategy 2025 + Full Prüfungssimulation",
+      ],
     },
-    {
-      id: 6,
-      level: "A2–B2",
-      title: "ÖSD Prep",
-      description:
-        "Austrian language exam preparation — widely accepted across Europe.",
-      features: ["ÖSD Format", "Listening Skills", "Exam Strategy"],
-    },
+    // {
+    //   id: 6,
+    //   level: "A2–B2",
+    //   title: "ÖSD Prep",
+    //   description:
+    //     "Austrian language exam preparation — widely accepted across Europe.",
+    //   features: ["ÖSD Format", "Listening Skills", "Exam Strategy"],
+    // },
   ],
 
   english: [
@@ -63,7 +87,11 @@ const languageCourses = {
       title: "General English",
       description:
         "Comprehensive English communication for daily and professional use.",
-      features: ["Grammar", "Vocabulary", "Communication"],
+      features: [
+        " EU Work Visa Prep: Common Interview Questions + Answer Drills",
+        " Real-Life Conversations: Redemittel for Shopping, Office, Doctor, Housing",
+        "Essential Grammar + Vocab: Core Concepts for Real Communication",
+      ],
     },
     {
       id: 2,
@@ -161,7 +189,7 @@ const OurCourses = () => {
           {languageCourses[language].map((course, index) => (
             <div
               key={course.id}
-              className="bg-white border border-gray-300 rounded-2xl p-6 shadow-md hover:shadow-xl transition-all duration-300"
+              className="bg-white border border-gray-300 rounded-2xl p-6 shadow-md hover:shadow-xl transition-all duration-300 flex flex-col gap-2"
             >
               <Badge text={course.level} className="justify-end" />
 
@@ -177,7 +205,7 @@ const OurCourses = () => {
                 {course.features.map((feature, index) => (
                   <li
                     key={index}
-                    className="flex items-center gap-2 text-gray-600"
+                    className="flex items-start gap-2 text-gray-600"
                   >
                     <Check className="text-red-500" size={18} />
                     <p>{feature}</p>
@@ -187,7 +215,7 @@ const OurCourses = () => {
 
               <Button
                 text="Enroll Now"
-                className="border border-red-500  hover:bg-red-600 hover:text-white text-red-500 mt-8 w-full "
+                className="border border-red-500  hover:bg-red-600 hover:text-white text-red-500 mt-auto w-full "
               />
             </div>
           ))}

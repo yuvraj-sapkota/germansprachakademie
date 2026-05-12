@@ -99,11 +99,20 @@ const ContactUs = () => {
 
                   <div className="flex items-start gap-3">
                     <Phone size={18} className="text-red-500 mt-1" />
+                    <a href="tel:071536000" className="hover:text-gray-900">
+                      071536000 |
+                    </a>
                     <a
-                      href="tel:+9779811526003"
+                      href="tel:+9779766701845"
                       className="hover:text-gray-900"
                     >
-                      +977 9811526003
+                      9766701845 |
+                    </a>
+                    <a
+                      href="tel:+9779714192782"
+                      className="hover:text-gray-900"
+                    >
+                      9714192782 |
                     </a>
                   </div>
 
@@ -127,7 +136,7 @@ const ContactUs = () => {
 
                 <div className="flex flex-col sm:flex-row gap-3">
                   <a
-                    href="https://wa.me/9811526003"
+                    href="https://wa.me/9766701845"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex-1 text-center bg-green-500 text-white py-2.5 rounded-lg font-medium hover:bg-green-600 transition"
@@ -136,7 +145,7 @@ const ContactUs = () => {
                   </a>
 
                   <a
-                    href="tel:+9779811526003"
+                    href="tel:+9779766701845"
                     className="flex-1 text-center border border-gray-300 py-2.5 rounded-lg font-medium hover:bg-gray-100 transition"
                   >
                     Call Now
@@ -148,7 +157,7 @@ const ContactUs = () => {
               <div className="rounded-xl overflow-hidden border border-gray-200 h-64 shadow-sm">
                 <iframe
                   title="map"
-                  src="https://www.google.com/maps?q=Butwal,Nepal&output=embed"
+                  src="https://www.google.com/maps?q=Butwal-09,Tinkune-Milan%20Chowk,Nepal&output=embed"
                   className="w-full h-full border-0"
                   loading="lazy"
                 ></iframe>
