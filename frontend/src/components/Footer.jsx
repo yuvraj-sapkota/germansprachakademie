@@ -6,8 +6,8 @@ import Logo from "./Logo";
 const quickLinks = ["Home", "About us", "Courses", "Why Choose Us", "Contact"];
 
 const courses = [
-  { name: "German A1/A2" },
-  { name: "German B1/B2" },
+  { name: "German A1/A2/B1/B2" },
+
   { name: "Goethe/ÖSD Prep" },
   { name: "IELTS/PTE Prep" },
   { name: "Japanese N4/N5" },
@@ -21,8 +21,7 @@ const contactInfo = [
   },
   {
     icon: Phone,
-    text: "+977 9811526003",
-    href: "tel:+9779811526003",
+    numbers: ["071536000", "+977 9766701845", "+977 9714192782"],
   },
   {
     icon: Mail,
@@ -126,8 +125,32 @@ export default function Footer() {
             {contactInfo.map((item, i) => {
               const Icon = item.icon;
 
+              // PHONE NUMBERS
+              if (item.numbers) {
+                return (
+                  <div
+                    key={i}
+                    className="flex gap-2 text-gray-400 font-medium text-sm md:text-base tracking-tight "
+                  >
+                    <Icon size={18} className="flex-shrink-0 mt-1" />
+
+                    <div className="flex flex-col">
+                      {item.numbers.map((number, idx) => (
+                        <a
+                          key={idx}
+                          href={`tel:${number}`}
+                          className="hover:text-white transition"
+                        >
+                          {number}
+                        </a>
+                      ))}
+                    </div>
+                  </div>
+                );
+              }
+
               const content = (
-                <div className="flex gap-2 items-center text-gray-400 font-medium text-sm md:text-base tracking-tight">
+                <div className="flex gap-2 items-center text-gray-400 font-medium text-sm md:text-base tracking-tight ">
                   <Icon size={18} className="flex-shrink-0" />
                   {item.text}
                 </div>
