@@ -1,8 +1,45 @@
 import { Clock, Mail, MapPin, Phone } from "lucide-react";
 import Badge from "../../components/Badge";
 import SectionHeader from "../../components/SectionHeader";
+import { useState } from "react";
+import { toast } from "react-toastify";
 
 const ContactUs = () => {
+  const [form, setForm] = useState({
+    name: "",
+    email: "",
+    phone: "",
+    message: "",
+  });
+
+  const handleChange = (e) => {
+    setForm({ ...form, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    const whatsappMessage = `
+    Name:${form.name} 
+    Email:${form.email} 
+    Phone ${form.phone}
+    Message:${form.message}`;
+
+    window.open(
+      `https://wa.me/9779815962484?text=${encodeURIComponent(whatsappMessage)}`,
+      "_blank",
+    );
+
+    // toast.success("Message Prepare successfully");
+
+    setForm({
+      name: "",
+      email: "",
+      phone: "",
+      message: "",
+    });
+  };
+
   return (
     <>
       <section id="contact" className="scroll-mt-20 py-14 bg-gray-100">
@@ -21,7 +58,7 @@ const ContactUs = () => {
           <div className="grid lg:grid-cols-2 gap-12 mt-10">
             {/* right  */}
             <div className="bg-gray-50 p-6 md:p-8 rounded-2xl shadow-sm border border-gray-100">
-              <form className="flex flex-col gap-5">
+              <form onSubmit={handleSubmit} className="flex flex-col gap-5">
                 {/* Full Name */}
                 <div className="flex flex-col gap-1">
                   <label className="text-sm font-medium text-gray-700">
@@ -29,6 +66,9 @@ const ContactUs = () => {
                   </label>
                   <input
                     type="text"
+                    name="name"
+                    value={form.name}
+                    onChange={handleChange}
                     placeholder="Enter your full name"
                     className="border border-gray-200 rounded-lg px-4 py-2.5 focus:outline-none focus:ring-2 focus:ring-red-500"
                   />
@@ -40,6 +80,9 @@ const ContactUs = () => {
                     Email Address
                   </label>
                   <input
+                    name="email"
+                    value={form.email}
+                    onChange={handleChange}
                     type="email"
                     placeholder="Enter your email"
                     className="border border-gray-200 rounded-lg px-4 py-2.5 focus:outline-none focus:ring-2 focus:ring-red-500"
@@ -52,6 +95,9 @@ const ContactUs = () => {
                     Phone Number
                   </label>
                   <input
+                    name="phone"
+                    value={form.phone}
+                    onChange={handleChange}
                     type="tel"
                     placeholder="Enter your phone number"
                     className="border border-gray-200 rounded-lg px-4 py-2.5 focus:outline-none focus:ring-2 focus:ring-red-500"
@@ -64,6 +110,9 @@ const ContactUs = () => {
                     Message
                   </label>
                   <textarea
+                    name="message"
+                    value={form.message}
+                    onChange={handleChange}
                     rows="4"
                     placeholder="Write your message..."
                     className="border border-gray-200 rounded-lg px-4 py-2.5 focus:outline-none focus:ring-2 focus:ring-red-500 resize-none"
