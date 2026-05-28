@@ -26,7 +26,7 @@ const ContactUs = () => {
     Message:${form.message}`;
 
     window.open(
-      `https://wa.me/9779815962484?text=${encodeURIComponent(whatsappMessage)}`,
+      `https://wa.me/9766701845?text=${encodeURIComponent(whatsappMessage)}`,
       "_blank",
     );
 
