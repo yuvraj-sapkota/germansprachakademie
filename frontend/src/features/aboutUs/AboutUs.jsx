@@ -214,7 +214,7 @@ export default function About() {
 
           {/* Mobile image */}
           <motion.div
-            className="mt-10 lg:hidden rounded-lg overflow-hidden shadow-lg aspect-video"
+            className="mt-10 lg:hidden rounded-lg overflow-hidden shadow-lg aspect-video h-96 md:h-[600px] w-full"
             initial={{ opacity: 0, scale: 0.95 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
