@@ -19,6 +19,45 @@ const ContactUs = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
+    const { name, email, phone, message } = form;
+
+    // Required field validation
+    if (!name.trim()) {
+      toast.error("Please enter your name");
+      return;
+    }
+
+    if (!email.trim()) {
+      toast.error("Please enter your email");
+      return;
+    }
+
+    if (!phone.trim()) {
+      toast.error("Please enter your phone number");
+      return;
+    }
+
+    if (!message.trim()) {
+      toast.error("Please enter your message");
+      return;
+    }
+
+    // Email validation
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    if (!emailRegex.test(email)) {
+      toast.error("Please enter a valid email address");
+      return;
+    }
+
+    // Phone validation
+    const phoneRegex = /^[0-9+\-\s]{7,15}$/;
+
+    if (!phoneRegex.test(phone)) {
+      toast.error("Please enter a valid phone number");
+      return;
+    }
+
     const whatsappMessage = `
     Name:${form.name} 
     Email:${form.email} 
@@ -56,7 +95,7 @@ const ContactUs = () => {
           />
 
           <div className="grid lg:grid-cols-2 gap-12 mt-10">
-            {/* right  */}
+            {/* left  */}
             <div className="bg-gray-50 p-6 md:p-8 rounded-2xl shadow-sm border border-gray-100">
               <form onSubmit={handleSubmit} className="flex flex-col gap-5">
                 {/* Full Name */}
@@ -129,7 +168,7 @@ const ContactUs = () => {
               </form>
             </div>
 
-            {/* left  */}
+            {/* right  */}
             <div className="flex flex-col gap-8  justify-center">
               {/* Find Us */}
               <div className="flex flex-col gap-4">
@@ -149,19 +188,19 @@ const ContactUs = () => {
                   <div className="flex items-start gap-3">
                     <Phone size={18} className="text-red-500 mt-1" />
                     <a href="tel:071536000" className="hover:text-gray-900">
-                      071536000 |
+                      071536000
                     </a>
                     <a
                       href="tel:+9779766701845"
                       className="hover:text-gray-900"
                     >
-                      9766701845 |
+                      9766701845
                     </a>
                     <a
                       href="tel:+9779714192782"
                       className="hover:text-gray-900"
                     >
-                      9714192782 |
+                      9714192782
                     </a>
                   </div>
 
@@ -185,7 +224,7 @@ const ContactUs = () => {
 
                 <div className="flex flex-col sm:flex-row gap-3">
                   <a
-                    href="https://wa.me/9766701845"
+                    href="https://wa.me/9779766701845"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex-1 text-center bg-green-500 text-white py-2.5 rounded-lg font-medium hover:bg-green-600 transition"
@@ -206,7 +245,7 @@ const ContactUs = () => {
               <div className="rounded-xl overflow-hidden border border-gray-200 h-64 shadow-sm">
                 <iframe
                   title="map"
-                  src="https://www.google.com/maps?q=Butwal-09,Tinkune-Milan%20Chowk,Nepal&output=embed"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d703.8223563086004!2d83.4629149!3d27.6891078!2m3!1f0!2f0!2f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3996871bdbd7ad0d%3A0x285a066e5a823154!2sGerman%20sprach%20Akademie!5e1!3m2!1sen!2snp!4v1782194296053!5m2!1sen!2snp"
                   className="w-full h-full border-0"
                   loading="lazy"
                 ></iframe>

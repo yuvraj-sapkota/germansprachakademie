@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import { Menu, X } from "lucide-react";
 import Logo from "../Logo";
-// import Logo from "./Logo";
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
@@ -54,14 +53,20 @@ export default function Navbar() {
                 </button>
               </li>
             ))}
-            <button className="bg-red-500 text-white rounded-lg font-medium px-4 py-2 text-base">
+            <button
+              onClick={() => handleScroll("contact")}
+              className="bg-red-500 text-white rounded-lg font-medium px-4 py-2 text-base"
+            >
               Enroll Now
             </button>
           </ul>
-
+ 
           {/* MOBILE MENU BUTTON */}
           <button
             className="md:hidden text-gray-700"
+            aria-label="Open menu"
+            aria-expanded={open}
+            aria-controls="mobile-menu"
             onClick={() => setOpen(true)}
           >
             <Menu size={26} />
@@ -71,6 +76,7 @@ export default function Navbar() {
 
       {/* MOBILE MENU */}
       <div
+        id="mobile-menu"
         className={` md:hidden fixed top-0 right-0 h-full w-[260px] shadow-md  bg-white z-50 transform transition-transform duration-300 ${
           open ? "translate-x-0" : "translate-x-full"
         }`}
@@ -83,15 +89,23 @@ export default function Navbar() {
 
         <ul className="flex flex-col gap-6 px-6 mt-10 text-lg">
           {links.map((link) => (
-            <li key={link.id}>
-              <button
-                onClick={() => handleScroll(link.id)}
-                className="text-gray-900 hover:text-yellow-400 transition text-left w-full"
-              >
-                {link.name}
-              </button>
-            </li>
+            
+              <li key={link.id}>
+                <button
+                  onClick={() => handleScroll(link.id)}
+                  className="text-gray-900 hover:text-yellow-400 transition text-left w-full"
+                >
+                  {link.name}
+                </button>
+              </li>
+            
           ))}
+          <button
+            onClick={() => handleScroll("contact")}
+            className="bg-red-500 text-white rounded-lg font-medium px-4 py-2 text-base"
+          >
+            Enroll Now
+          </button>
         </ul>
       </div>
 

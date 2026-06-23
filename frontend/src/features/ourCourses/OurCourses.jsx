@@ -16,8 +16,7 @@ const languageCourses = {
       features: [
         " Full Grammar: A-Z, der/die/das, Akkusativ, Präsens",
         "Real Talks: Name, Einkaufen, Uhrzeit, Termine",
-        ,
-        "  Goethe A1 Prep: Hören/Lesen/Schreiben/Sprechen + Mocks",
+        "Goethe A1 Prep: Hören/Lesen/Schreiben/Sprechen + Mocks",
       ],
 
       // features: ["Goethe A1 Prep", "Grammar Basics", "Spoken Practice"],
@@ -30,8 +29,8 @@ const languageCourses = {
         "Elementary level covering past tense, travel & social interactions.",
       features: [
         "Key Grammar: Perfekt, Präteritum, Dativ, Modalverben",
-        " Real Talks: Weg fragen, Arzt, Wohnung, Reisen",
-        " Goethe A2 Prep: Brief schreiben + Alle Teile + Mocks",
+        "Real Talks: Weg fragen, Arzt, Wohnung, Reisen",
+        "Goethe A2 Prep: Brief schreiben + Alle Teile + Mocks",
       ],
     },
     {
@@ -41,9 +40,9 @@ const languageCourses = {
       description:
         "Intermediate fluency for work, study, and integration in Germany.",
       features: [
-        " Core Grammar: Nebensätze, Adjektive, Konjunktiv II",
-        " Real Talks: Job Interview, Behörden, Meinung sagen",
-        " Goethe/ÖSD B1 Prep: E-Mail, Präsentation, Diskussion + Mocks",
+        "Core Grammar: Nebensätze, Adjektive, Konjunktiv II",
+        "Real Talks: Job Interview, Behörden, Meinung sagen",
+        "Goethe/ÖSD B1 Prep: E-Mail, Präsentation, Diskussion + Mocks",
       ],
     },
     {
@@ -53,9 +52,9 @@ const languageCourses = {
       description:
         "Upper-intermediate level required for Ausbildung & universities.",
       features: [
-        " Advanced Grammar: Passiv, Konjunktiv I, N-Deklination",
-        " Real Talks: Uni Bewerbung, Argumentieren, Vortrag halten",
-        " Goethe/ÖSD B2 Prep: Diagramm, Textanalyse, Alle Teile + Mocks",
+        "Advanced Grammar: Passiv, Konjunktiv I, N-Deklination",
+        "Real Talks: Uni Bewerbung, Argumentieren, Vortrag halten",
+        "Goethe/ÖSD B2 Prep: Diagramm, Textanalyse, Alle Teile + Mocks",
       ],
     },
     {
@@ -65,19 +64,11 @@ const languageCourses = {
       description:
         "Intensive preparation for official Goethe-Institut examinations.",
       features: [
-        "  Alle Module: Hören, Lesen, Schreiben, Sprechen Training",
+        "Alle Module: Hören, Lesen, Schreiben, Sprechen Training",
         "Mock Tests + Past Papers + Speaking Drills",
         "Latest Exam Strategy 2025 + Full Prüfungssimulation",
       ],
     },
-    // {
-    //   id: 6,
-    //   level: "A2–B2",
-    //   title: "ÖSD Prep",
-    //   description:
-    //     "Austrian language exam preparation — widely accepted across Europe.",
-    //   features: ["ÖSD Format", "Listening Skills", "Exam Strategy"],
-    // },
   ],
 
   english: [
@@ -88,8 +79,8 @@ const languageCourses = {
       description:
         "Comprehensive English communication for daily and professional use.",
       features: [
-        " EU Work Visa Prep: Common Interview Questions + Answer Drills",
-        " Real-Life Conversations: Redemittel for Shopping, Office, Doctor, Housing",
+        "EU Work Visa Prep: Common Interview Questions + Answer Drills",
+        "Real-Life Conversations: Redemittel for Shopping, Office, Doctor, Housing",
         "Essential Grammar + Vocab: Core Concepts for Real Communication",
       ],
     },

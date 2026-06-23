@@ -3,7 +3,13 @@ import { FaFacebookF, FaInstagram, FaTiktok } from "react-icons/fa";
 import Logo from "./Logo";
 
 // ✅ Data (clean & scalable)
-const quickLinks = ["Home", "About us", "Courses", "Why Choose Us", "Contact"];
+const quickLinks = [
+  { name: "Home", id: "hero" },
+  { name: "About Us", id: "about" },
+  { name: "Courses", id: "courses" },
+  { name: "Why Choose Us", id: "why-choose-us" },
+  { name: "Contact", id: "contact" },
+];
 
 const courses = [
   { name: "German A1/A2/B1/B2" },
@@ -61,6 +67,11 @@ const FooterSection = ({ title, children }) => (
 );
 
 export default function Footer() {
+  const handleScroll = (id) => {
+    document.getElementById(id)?.scrollIntoView({
+      behavior: "smooth",
+    });
+  };
   return (
     <footer className="bg-black">
       <div className="max-w-7xl mx-auto px-4 py-14">
@@ -93,13 +104,14 @@ export default function Footer() {
 
           {/* Quick Links */}
           <FooterSection title="Quick Links">
-            {quickLinks.map((link, i) => (
-              <p
-                key={i}
-                className="text-gray-400 font-medium text-sm md:text-base tracking-tight"
+            {quickLinks.map((link) => (
+              <button
+                key={link.id}
+                onClick={() => handleScroll(link.id)}
+                className="text-gray-400 font-medium text-sm md:text-base tracking-tight text-left hover:text-yellow-400 transition duration-300 hover:cursor-pointer"
               >
-                {link}
-              </p>
+                {link.name}
+              </button>
             ))}
           </FooterSection>
 
@@ -170,7 +182,14 @@ export default function Footer() {
             })}
           </FooterSection>
         </div>
+      <div className="border-t border-gray-800 mt-12 pt-6 text-center">
+        <p className="text-gray-500 text-sm">
+          © {new Date().getFullYear()} German Sprach Akademie. All Rights
+          Reserved.
+        </p>
       </div>
+      </div>
+
     </footer>
   );
 }

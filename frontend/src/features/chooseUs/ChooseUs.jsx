@@ -84,7 +84,7 @@ const features = [
 const ChooseUs = () => {
   return (
     <>
-      <section className="py-14">
+      <section className="py-14" id="why-choose-us">
         <div className="max-w-7xl mx-auto px-4">
           <Badge
             text="Our advantage"

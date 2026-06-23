@@ -1,14 +1,12 @@
-import { ArrowBigDown, MoveRight } from "lucide-react";
-import React from "react";
-import { motion } from "framer-motion";
 import Button from "../../components/Button";
 import heroImage from "../../assets/heroImage.jpeg";
+import LanguageBadge from "../../components/LanguageBadge";
 
 const Hero = () => {
   return (
     <section
       id="hero"
-      className="scroll-mt-20 w-full h-[90vh] bg-cover bg-center relative flex mt-20 mb-10 pt-14 md:pt-20"
+      className="scroll-mt-20 w-full min-h-screen bg-cover bg-center relative flex mt-20 mb-10 pt-14 md:pt-20"
       style={{
         backgroundImage: `url(${heroImage})`,
       }}
@@ -18,12 +16,7 @@ const Hero = () => {
 
       {/* Content */}
       <div className="relative z-10 max-w-7xl mx-auto px-4 text-white">
-        <motion.div
-          initial={{ opacity: 0, y: 80 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, ease: "easeOut" }}
-          viewport={{ once: true, amount: 0.2 }}
-        >
+        <div>
           <p className="text-white font-semibold text-sm md:text-base">
             German Sprach <span className="text-yellow-500">Akademie</span>
           </p>
@@ -37,39 +30,33 @@ const Hero = () => {
             with international exam preparation and abroad career guidance.
           </p>
 
-          <div className="flex flex-wrap gap-3 mt-8">
-            {["German", "English", "Japanese", "Korean"].map((item) => (
-              <span
-                key={item}
-                className="bg-white/10 backdrop-blur-md border border-white/20 text-white px-6 py-3 rounded-full text-sm  transition-all duration-300 cursor-pointer "
-              >
-                {item}
-              </span>
-            ))}
-          </div>
-        </motion.div>
+          <LanguageBadge />
+        </div>
 
         {/* Buttons */}
         <div className="mt-8 flex flex-col sm:flex-row gap-4">
-          <motion.div
-            initial={{ opacity: 0, y: 100 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1, ease: "easeOut" }}
-            viewport={{ once: true, amount: 0.2 }}
-          >
-            <Button text="Enroll Now" className="bg-red-500 hover:bg-red-600" />
-          </motion.div>
-          <motion.div
-            initial={{ opacity: 0, y: 110 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1, ease: "easeOut" }}
-            viewport={{ once: true, amount: 0.2 }}
-          >
+          <div>
+            <Button
+              text="Enroll Now"
+              onClick={() =>
+                document
+                  .getElementById("contact")
+                  ?.scrollIntoView({ behavior: "smooth" })
+              }
+              className="bg-red-500 hover:bg-red-600"
+            />
+          </div>
+          <div>
             <Button
               text="Book Free Counseling"
+              onClick={() =>
+                document
+                  .getElementById("contact")
+                  ?.scrollIntoView({ behavior: "smooth" })
+              }
               className="border border-white hover:bg-white hover:text-black"
             />
-          </motion.div>
+          </div>
         </div>
       </div>
     </section>
