@@ -48,7 +48,7 @@ const socialLinks = [
   {
     icon: FaInstagram,
     link:
-      "https://www.instagram.com/germansprachakademie?igsh=MTgyMXhpNTdzZHQ3dQ%3D%3D&utm_source=qr",
+      "https://www.instagram.com/germansprachakademie2026",
   },
   {
     icon: FaTiktok,
